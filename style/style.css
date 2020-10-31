@@ -1,3 +1,24 @@
+:root{
+    /*## Colors
+
+    ### Primary
+    */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    
+    /*### Neutral*/
+    
+    --light-gray: hsl(0, 0%, 81%);
+    --ight-grayish-blue: hsl(210, 46%, 95%);
+    
+    /*Note for text colors:
+    
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity*/
+
+}
 /*Обнуление*/
 *,
 *:before,
@@ -9,12 +30,19 @@
 } 
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: var(--ight-grayish-blue);
+    font-size: 13px;
+    margin: 0 20px;
 }
 .container {
     width: 1440px; /*ширина блока*/
     max-width: 100%; /*максимальный размер 1440пх*/
-    margin: 0 auto; /*выровниваем по центру*/
+    margin: 20px auto; /*выровниваем по центру*/
     padding: 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: 7px 7px 7px 0px rgba(0,0,0,0.38);
+    -moz-box-shadow: 7px 7px 7px 0px rgba(0,0,0,0.38);
+    box-shadow: 7px 7px 7px 0px rgba(0,0,0,0.38);
     
 }
 
@@ -24,6 +52,7 @@ body{
     /*border: 3px solid red;*/
     width: 80%;
     background-color: hsl(240, 75%, 98%);
+    margin-bottom: 20px;
     
 }
 .card img{
@@ -31,4 +60,46 @@ body{
     height: 50px;
     margin: 0 15px 0 15px;
     width: 50px;
+}
+
+.container.white, .white .card{
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+
+}
+.container.blackish, .blackish .card{
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--white);
+
+}
+.container.grayish, .grayish .card{
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--white);
+
+}
+.container.violet, .violet .card{
+    background-color: var(--moderate-violet);
+    color: var(--white);
+}
+h2{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
+
+}
+h3{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 50%;
+
+}
+p{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 70%;
 }
